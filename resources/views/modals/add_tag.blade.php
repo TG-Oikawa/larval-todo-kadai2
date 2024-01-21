@@ -2,7 +2,7 @@
 @include('modals.edit_tag')
 
 <!-- タグの削除用モーダル -->
-@include('modals/delete_tag')
+@include('modals.delete_tag')
 
 <div class="modal fade" id="addTagModal" tabindex="-1" aria-labelledby="addTagModalLabel">
     <div class="modal-dialog">
@@ -18,8 +18,8 @@
                     <div class="d-flex flex-wrap">
                         @foreach ($tags as $tag)
                             <div class="d-flex align-items-center mt-3 me-3">
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }} data-tag-name="{{ $tag->mane }}">{{ $tag->name }}</button>
-                                <button type="button" class="btn-close ms-1" aria-label="削除" data-bs-toggle="modal" data-bs-target="#deleteTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }} data-tag-name="{{ $tag->name }}"></button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }}" data-tag-name="{{ $tag->name }}">{{ $tag->name }}</button>
+                                <button type="button" class="btn-close ms-1" aria-label="削除" data-bs-toggle="modal" data-bs-target="#deleteTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }}" data-tag-name="{{ $tag->name }}"></button>
                             </div>
                         @endforeach
                     </div>
